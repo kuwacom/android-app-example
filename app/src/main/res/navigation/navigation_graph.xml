@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/firstFragment">
+
+    <fragment
+        android:id="@+id/firstFragment"
+        android:name="dev.kuwa.test_android_navigation.ui.FirstFragment"
+        android:label="fragment_first"
+        tools:layout="@layout/fragment_first" >
+        <action
+            android:id="@+id/action_firstFragment_to_selectLoginFragment"
+            app:destination="@id/selectLoginFragment"
+            app:popUpTo="@id/firstFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_firstFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/firstFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="dev.kuwa.test_android_navigation.ui.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/selectLoginFragment"
+        android:name="dev.kuwa.test_android_navigation.ui.login.SelectLoginFragment"
+        android:label="fragment_select_login"
+        tools:layout="@layout/fragment_select_login" >
+        <action
+            android:id="@+id/action_selectLoginFragment_to_loginGoogleFragment"
+            app:destination="@id/loginGoogleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginGoogleFragment"
+        android:name="dev.kuwa.test_android_navigation.ui.login.LoginGoogleFragment"
+        android:label="fragment_login_google"
+        tools:layout="@layout/fragment_login_google" >
+        <action
+            android:id="@+id/action_loginGoogleFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/selectLoginFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>
