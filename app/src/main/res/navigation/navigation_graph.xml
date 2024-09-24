@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/firstFragment"
-        android:name="dev.kuwa.test_android_navigation.FirstFragment"
+        android:name="dev.kuwa.android_app_example.FirstFragment"
         android:label="fragment_first"
         tools:layout="@layout/fragment_first" >
         <action
@@ -23,7 +23,7 @@
     </fragment>
     <fragment
         android:id="@+id/homeFragment"
-        android:name="dev.kuwa.test_android_navigation.ui.HomeFragment"
+        android:name="dev.kuwa.android_app_example.ui.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
         <action
@@ -43,7 +43,7 @@
     </fragment>
     <fragment
         android:id="@+id/selectLoginFragment"
-        android:name="dev.kuwa.test_android_navigation.ui.login.SelectLoginFragment"
+        android:name="dev.kuwa.android_app_example.ui.login.SelectLoginFragment"
         android:label="fragment_select_login"
         tools:layout="@layout/fragment_select_login" >
         <action
@@ -60,7 +60,7 @@
     </fragment>
     <fragment
         android:id="@+id/loginGoogleFragment"
-        android:name="dev.kuwa.test_android_navigation.ui.login.LoginGoogleFragment"
+        android:name="dev.kuwa.android_app_example.ui.login.LoginGoogleFragment"
         android:label="fragment_login_google"
         tools:layout="@layout/fragment_login_google" >
         <action
@@ -71,12 +71,12 @@
     </fragment>
     <fragment
         android:id="@+id/voiceVoxFragment"
-        android:name="dev.kuwa.test_android_navigation.ui.voicevox.VoiceVoxFragment"
+        android:name="dev.kuwa.android_app_example.ui.voicevox.VoiceVoxFragment"
         android:label="fragment_voice_vox"
         tools:layout="@layout/fragment_voice_vox" />
     <fragment
         android:id="@+id/timeInfoFragment"
-        android:name="dev.kuwa.test_android_navigation.ui.timeInfo.TimeInfoFragment"
+        android:name="dev.kuwa.android_app_example.ui.timeInfo.TimeInfoFragment"
         android:label="fragment_time_info"
         tools:layout="@layout/fragment_time_info" />
 </navigation>

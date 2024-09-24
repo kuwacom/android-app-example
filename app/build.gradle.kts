@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "dev.kuwa.test_android_navigation"
+    namespace = "dev.kuwa.android_app_example"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "dev.kuwa.test_android_navigation"
+        applicationId = "dev.kuwa.android_app_example"
         minSdk = 28
         targetSdk = 34
         versionCode = 1
