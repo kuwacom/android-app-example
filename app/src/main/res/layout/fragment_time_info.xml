@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.timeInfo.TimeInfoFragment">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="TimeInfo"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <TextView
+            android:id="@+id/textViewUtcOffset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="UTC Offset" />
+
+        <TextView
+            android:id="@+id/textViewTimezone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Timezone" />
+
+        <TextView
+            android:id="@+id/textViewDayOfWeek"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Day of Week" />
+
+        <TextView
+            android:id="@+id/textViewDayOfYear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Day of Year" />
+
+        <TextView
+            android:id="@+id/textViewDatetime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Datetime" />
+
+        <TextView
+            android:id="@+id/textViewUtcDatetime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="UTC Datetime" />
+
+        <TextView
+            android:id="@+id/textViewUnixtime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Unix Time" />
+
+        <TextView
+            android:id="@+id/textViewRawOffset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Raw Offset" />
+
+        <TextView
+            android:id="@+id/textViewWeekNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Week Number" />
+
+        <TextView
+            android:id="@+id/textViewDst"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DST" />
+
+        <TextView
+            android:id="@+id/textViewAbbreviation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Abbreviation" />
+
+        <TextView
+            android:id="@+id/textViewDstOffset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DST Offset" />
+
+        <TextView
+            android:id="@+id/textViewDstFrom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DST From" />
+
+        <TextView
+            android:id="@+id/textViewDstUntil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DST Until" />
+
+        <TextView
+            android:id="@+id/textViewClientIp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Client IP" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/jsonDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="jsonDisplay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
