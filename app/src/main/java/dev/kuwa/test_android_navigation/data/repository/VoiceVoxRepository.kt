@@ -30,7 +30,7 @@ class VoiceVoxRepository() {
     suspend fun getSpeakers(): Result<List<VoiceVoxSpeaker>> {
         return try {
             // RetrofitのAPI呼び出しを非同期で実行
-            val response = service.getSample()
+            val response = service.getSpeakers()
             if (response.isSuccessful) {
                 // 成功時、結果を返す
                 Result.success(response.body() ?: emptyList())

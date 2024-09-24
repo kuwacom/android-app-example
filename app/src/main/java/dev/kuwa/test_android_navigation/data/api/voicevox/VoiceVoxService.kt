@@ -12,7 +12,7 @@ interface VoiceVoxService {
 //
     // コルーチン方式
     @GET("speakers")
-    suspend fun getSample(): Response<List<VoiceVoxSpeaker>> // List<SampleResponse>を返す
+    suspend fun getSpeakers(): Response<List<VoiceVoxSpeaker>> // List<SampleResponse>を返す
 
 
 }
