@@ -1,4 +1,4 @@
-package dev.kuwa.test_android_navigation.ui
+package dev.kuwa.test_android_navigation
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
@@ -6,9 +6,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.navigation.fragment.NavHostFragment
-import dev.kuwa.test_android_navigation.R
-import dev.kuwa.test_android_navigation.data.LoginRepository
-import dev.kuwa.test_android_navigation.ui.login.SelectLoginFragment
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,6 +19,7 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
+        // ここで Navigation による表示をするようにする
         val navHostFragment = supportFragmentManager
             .findFragmentById(R.id.nav_host_fragment) as NavHostFragment
         val navController = navHostFragment.navController

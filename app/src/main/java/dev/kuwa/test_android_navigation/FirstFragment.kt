@@ -1,4 +1,4 @@
-package dev.kuwa.test_android_navigation.ui
+package dev.kuwa.test_android_navigation
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import dev.kuwa.test_android_navigation.R
 
 /**
  * 最初に表示される画面(ロード表記にする)
@@ -24,7 +23,7 @@ class FirstFragment : Fragment() {
 
         view.postDelayed({
             // ログイン状態のチェック
-            if (isUserLoggedIn()) {
+            if (isLoggedIn()) {
                 // ログイン済みならHomeFragmentに遷移
                 findNavController().navigate(R.id.action_firstFragment_to_homeFragment)
             } else {
@@ -34,7 +33,7 @@ class FirstFragment : Fragment() {
         }, 2000)
     }
 
-    private fun isUserLoggedIn(): Boolean {
+    private fun isLoggedIn(): Boolean {
         return false
     }
 }
