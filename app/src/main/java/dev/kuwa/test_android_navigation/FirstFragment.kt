@@ -47,19 +47,18 @@ class FirstFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        val app = requireActivity().application as MainApplication
+
         view.postDelayed({
             // ログイン状態のチェック
-            if (isLoggedIn()) {
+            if (app.isLoggedIn()) {
                 // ログイン済みならHomeFragmentに遷移
                 findNavController().navigate(R.id.action_firstFragment_to_homeFragment)
             } else {
                 // 未ログインならLoginFragmentに遷移
                 findNavController().navigate(R.id.action_firstFragment_to_selectLoginFragment)
             }
-        }, 2000)
+        }, 10000) // 疑似ロードで1秒待つ
     }
 
-    private fun isLoggedIn(): Boolean {
-        return false
-    }
 }
