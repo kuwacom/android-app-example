@@ -45,28 +45,49 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
-    implementation(libs.androidx.annotation)
-    implementation(libs.androidx.lifecycle.livedata.ktx)
-    implementation(libs.androidx.lifecycle.viewmodel.ktx)
+    implementation(libs.androidx.navigation.fragment.ktx)
+    implementation(libs.androidx.navigation.ui.ktx)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+//    implementation(libs.androidx.legacy.support.v4)
+    implementation(libs.androidx.lifecycle.livedata.ktx)
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
+//    implementation(libs.androidx.fragment.ktx)
 }
 
 dependencies {
-    val navVersion = "2.7.7"
-
     // Jetpack Compose integration
-    implementation("androidx.navigation:navigation-compose:$navVersion")
+    implementation(libs.androidx.navigation.compose)
 
     // Views/Fragments integration
-    implementation("androidx.navigation:navigation-fragment:$navVersion")
-    implementation("androidx.navigation:navigation-ui:$navVersion")
+    implementation(libs.androidx.navigation.fragment)
+    implementation(libs.androidx.navigation.ui)
 
     // Feature module support for Fragments
-    implementation("androidx.navigation:navigation-dynamic-features-fragment:$navVersion")
+    implementation(libs.androidx.navigation.dynamic.features.fragment)
 
     // Testing Navigation
-    androidTestImplementation("androidx.navigation:navigation-testing:$navVersion")
-
+    androidTestImplementation(libs.androidx.navigation.testing)
 }
+
+dependencies {
+    implementation(libs.androidx.viewpager2)
+    implementation(libs.androidx.recyclerview)
+}
+
+dependencies {
+    // 歩数やらの取得ができる Health Connect API
+    implementation(libs.androidx.connect.client)
+}
+
+dependencies {
+    // RESTAPI と JSONパーサー
+    implementation(libs.retrofit)
+    implementation(libs.converter.moshi)
+}
+
+apply(
+    plugin = "androidx.navigation.safeargs.kotlin"
+)
