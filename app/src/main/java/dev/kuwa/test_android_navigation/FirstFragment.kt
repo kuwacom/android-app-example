@@ -58,7 +58,7 @@ class FirstFragment : Fragment() {
                 // 未ログインならLoginFragmentに遷移
                 findNavController().navigate(R.id.action_firstFragment_to_selectLoginFragment)
             }
-        }, 10000) // 疑似ロードで1秒待つ
+        }, 1000) // 疑似ロードで1秒待つ
     }
 
 }
