@@ -2,8 +2,8 @@ package dev.kuwa.test_android_navigation.ui.login
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import dev.kuwa.test_android_navigation.data.LoginDataSource
-import dev.kuwa.test_android_navigation.data.LoginRepository
+import dev.kuwa.test_android_navigation.data.datasource.LoginDataSource
+import dev.kuwa.test_android_navigation.data.repository.LoginRepository
 
 /**
  * ViewModel provider factory to instantiate LoginViewModel.

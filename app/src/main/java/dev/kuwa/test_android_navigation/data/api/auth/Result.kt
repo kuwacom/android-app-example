@@ -1,4 +1,4 @@
-package dev.kuwa.test_android_navigation.data
+package dev.kuwa.test_android_navigation.data.api.auth
 
 /**
  * A generic class that holds a value with its loading status.

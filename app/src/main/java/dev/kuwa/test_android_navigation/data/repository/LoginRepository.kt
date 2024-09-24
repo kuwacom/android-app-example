@@ -1,5 +1,7 @@
-package dev.kuwa.test_android_navigation.data
+package dev.kuwa.test_android_navigation.data.repository
 
+import dev.kuwa.test_android_navigation.data.datasource.LoginDataSource
+import dev.kuwa.test_android_navigation.data.api.auth.Result
 import dev.kuwa.test_android_navigation.data.model.LoggedInUser
 
 /**

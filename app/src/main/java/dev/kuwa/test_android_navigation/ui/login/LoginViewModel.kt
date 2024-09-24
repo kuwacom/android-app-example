@@ -4,8 +4,8 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import android.util.Patterns
-import dev.kuwa.test_android_navigation.data.LoginRepository
-import dev.kuwa.test_android_navigation.data.Result
+import dev.kuwa.test_android_navigation.data.repository.LoginRepository
+import dev.kuwa.test_android_navigation.data.api.auth.Result
 
 import dev.kuwa.test_android_navigation.R
 

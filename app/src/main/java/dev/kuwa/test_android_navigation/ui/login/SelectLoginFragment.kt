@@ -6,8 +6,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import dev.kuwa.test_android_navigation.R
+import dev.kuwa.test_android_navigation.databinding.FragmentSelectLoginBinding
 
 /**
  * A simple [Fragment] subclass.
@@ -15,20 +17,42 @@ import dev.kuwa.test_android_navigation.R
  * create an instance of this fragment.
  */
 class SelectLoginFragment : Fragment() {
+
+    private var _binding: FragmentSelectLoginBinding? = null
+    private val binding get() = _binding!!
+
+//    private val args: SelectLoginFragmentArgs by navArgs()
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // レイアウトをinflateして返すだけ
-        return inflater.inflate(R.layout.fragment_select_login, container, false)
+    ): View {
+        // Inflate the layout for this fragment
+        _binding = FragmentSelectLoginBinding.inflate(inflater, container, false)
+        return binding.root
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         // GoogleLoginボタン押したら飛ぶ
-        view.findViewById<Button>(R.id.loginGoogle).setOnClickListener {
-            findNavController().navigate(R.id.action_selectLoginFragment_to_loginGoogleFragment)
+        binding.loginGoogle.setOnClickListener {
+            val action = SelectLoginFragmentDirections.actionSelectLoginFragmentToLoginGoogleFragment()
+            findNavController().navigate(action)
+        }
+
+        // LoginCancelボタン押したら飛ぶ
+        binding.loginCancel.setOnClickListener {
+            val action = SelectLoginFragmentDirections.actionSelectLoginFragmentToHomeFragment()
+            findNavController().navigate(action)
         }
     }
 }
