@@ -77,7 +77,7 @@ class VoiceVoxFragment() : Fragment() {
             binding.errorDisplay.text = error
         })
 
-        viewModel.fetchSample()
+        viewModel.fetchSpeakers()
 
     }
 

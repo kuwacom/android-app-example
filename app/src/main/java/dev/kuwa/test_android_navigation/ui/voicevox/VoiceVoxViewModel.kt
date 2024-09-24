@@ -16,7 +16,7 @@ class VoiceVoxViewModel(private val voiceVoxRepository: VoiceVoxRepository) : Vi
     private val _error = MutableLiveData<String>()
     val error: LiveData<String> get() = _error
 
-    fun fetchSample() {
+    fun fetchSpeakers() {
         viewModelScope.launch {
             // Repositoryからデータを取得
             val result = voiceVoxRepository.getSpeakers()
