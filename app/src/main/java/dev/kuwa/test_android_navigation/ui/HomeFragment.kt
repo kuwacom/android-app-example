@@ -7,6 +7,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import dev.kuwa.test_android_navigation.databinding.FragmentHomeBinding
+import dev.kuwa.test_android_navigation.notifications.GeneralNotification
+import dev.kuwa.test_android_navigation.utils.openNotificationSettings
 
 /**
  * A simple [Fragment] subclass.
@@ -47,5 +49,21 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         // 必要な処理はここで
+
+        // OpenNotificationSettingsButton
+        binding.openNotificationSettingsButton.setOnClickListener {
+            openNotificationSettings(requireContext())
+        }
+
+        // NotificationCheckButton
+        binding.notificationCheckButton.setOnClickListener {
+            GeneralNotification(requireContext()).sendNotification(
+                1,
+                "通知が有効です！",
+                "アプリからの通知が許可されています",
+//                R.drawable.notification // 通知アイコン(白黒)
+            )
+        }
+
     }
 }
