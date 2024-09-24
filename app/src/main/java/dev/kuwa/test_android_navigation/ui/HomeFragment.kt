@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import dev.kuwa.test_android_navigation.databinding.FragmentHomeBinding
 import dev.kuwa.test_android_navigation.notifications.GeneralNotification
 import dev.kuwa.test_android_navigation.utils.openNotificationSettings
@@ -63,6 +64,18 @@ class HomeFragment : Fragment() {
                 "アプリからの通知が許可されています",
 //                R.drawable.notification // 通知アイコン(白黒)
             )
+        }
+
+        // VoiceVoxButton
+        binding.voiceVoxButton.setOnClickListener {
+            val action = HomeFragmentDirections.actionHomeFragmentToVoiceVoxFragment()
+            findNavController().navigate(action)
+        }
+
+        // TimeInfo
+        binding.timeInfoButton.setOnClickListener {
+            val action = HomeFragmentDirections.actionHomeFragmentToTimeInfoFragment()
+            findNavController().navigate(action)
         }
 
     }
